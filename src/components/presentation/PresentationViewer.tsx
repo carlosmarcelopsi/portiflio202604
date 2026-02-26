@@ -25,21 +25,27 @@ const slides = [
 const PresentationViewer = () => {
   const [current, setCurrent] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [scale, setScale] = useState(1);
+  const [scale, setScale] = useState(0.5);
   const [showControls, setShowControls] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
   const hideTimer = useRef<ReturnType<typeof setTimeout>>();
 
   const updateScale = useCallback(() => {
-    if (!containerRef.current) return;
-    const { clientWidth: w, clientHeight: h } = containerRef.current;
-    setScale(Math.min(w / 1920, h / 1080));
+    const w = containerRef.current?.clientWidth || window.innerWidth;
+    const h = containerRef.current?.clientHeight || window.innerHeight;
+    const s = Math.min(w / 1920, h / 1080);
+    setScale(s > 0.01 ? s : 0.5);
   }, []);
 
   useEffect(() => {
+    // Run scale on mount and after a short delay for iframe sizing
     updateScale();
+    const t = setTimeout(updateScale, 100);
     window.addEventListener("resize", updateScale);
-    return () => window.removeEventListener("resize", updateScale);
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("resize", updateScale);
+    };
   }, [updateScale]);
 
   useEffect(() => {
@@ -76,20 +82,35 @@ const PresentationViewer = () => {
   return (
     <div
       ref={containerRef}
-      className="slide-container w-screen h-screen cursor-none"
-      style={{ background: "hsl(220 50% 5%)" }}
+      style={{
+        position: "fixed",
+        inset: 0,
+        background: "hsl(220 50% 5%)",
+        overflow: "hidden",
+      }}
       onMouseMove={handleMouseMove}
       onClick={next}
     >
       {/* Scaled slide */}
-      <div className="slide-wrapper" style={{ transform: `scale(${scale})` }} key={current}>
+      <div
+        style={{
+          position: "absolute",
+          width: 1920,
+          height: 1080,
+          left: "50%",
+          top: "50%",
+          transform: `translate(-50%, -50%) scale(${scale})`,
+          transformOrigin: "center center",
+        }}
+        key={current}
+      >
         <CurrentSlide />
       </div>
 
       {/* Controls overlay */}
       <div
         className="absolute inset-0 z-50 pointer-events-none transition-opacity duration-500"
-        style={{ opacity: showControls ? 1 : 0, cursor: "default" }}
+        style={{ opacity: showControls ? 1 : 0 }}
       >
         {/* Bottom bar */}
         <div className="absolute bottom-[24px] left-1/2 -translate-x-1/2 flex items-center gap-[16px] pointer-events-auto"
