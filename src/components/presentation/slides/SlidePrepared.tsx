@@ -1,7 +1,7 @@
 import SlideLayout from "../SlideLayout";
 
 const SlidePrepared = () => (
-  <SlideLayout backgroundImage="/images/team-success.jpg" overlay="gradient-left">
+  <SlideLayout backgroundImage="/images/industrial-workers.jpg" overlay="gradient-left">
     <div className="flex h-full">
       <div className="w-[55%] flex flex-col justify-center px-[120px]">
         <h2 className="slide-title animate-fade-in-up" style={{ color: "hsl(40 20% 95%)" }}>
