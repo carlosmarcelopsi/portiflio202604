@@ -1,8 +1,8 @@
 import SlideLayout from "../SlideLayout";
 
 const SlideValue = () => (
-  <SlideLayout>
-    <div className="flex items-center justify-center h-full" style={{ background: "linear-gradient(135deg, hsl(220 50% 8%), hsl(220 35% 14%))" }}>
+  <SlideLayout backgroundImage="/images/team-success.jpg" overlay="dark">
+    <div className="flex items-center justify-center h-full">
       <div className="text-center animate-scale-in px-[120px]">
         <h2 className="slide-title" style={{ color: "hsl(40 20% 95%)" }}>
           Qual o valor de líderes<br /><span className="text-gold-gradient">capacitados e engajados?</span>

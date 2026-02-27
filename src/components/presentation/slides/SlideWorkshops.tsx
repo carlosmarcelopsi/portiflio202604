@@ -2,33 +2,31 @@ import SlideLayout from "../SlideLayout";
 
 const SlideWorkshops = () => (
   <SlideLayout>
-    <div className="flex h-full" style={{ background: "linear-gradient(135deg, hsl(220 50% 8%), hsl(220 35% 14%))" }}>
-      <div className="flex-1 flex flex-col justify-center px-[120px]">
-        <div className="slide-label text-gold-gradient mb-[24px] animate-fade-in-up">Soluções</div>
-        <h2 className="slide-title animate-fade-in-up delay-100" style={{ color: "hsl(40 20% 95%)" }}>
-          Palestras e <span className="text-gold-gradient">Workshops</span>
-        </h2>
-        <div className="w-[80px] h-[3px] my-[40px] animate-fade-in-up delay-200" style={{ background: "hsl(40 70% 55%)" }} />
-        <div className="space-y-[36px]">
-          {[
-            { title: "Gestão da Pressão", desc: "Estresse, saúde e prevenção de acidentes e seus reflexos no trabalho e na vida" },
-            { title: "Saúde e Segurança", desc: "O papel de cada um e vida financeira" },
-            { title: "Saúde Mental na Corda Bamba", desc: "Equilíbrio entre vida pessoal e trabalho" },
-            { title: "Dependência Digital", desc: "Impactos da hiperconectividade na saúde mental" },
-          ].map((item, i) => (
-            <div key={i} className={`animate-fade-in-up delay-${(i + 3) * 100}`}>
-              <div className="slide-body-lg font-bold text-gold-gradient">{item.title}</div>
-              <div className="slide-body mt-[8px]" style={{ color: "hsl(220 10% 60%)" }}>{item.desc}</div>
-            </div>
-          ))}
-        </div>
-        <p className="mt-[40px] animate-fade-in-up delay-700" style={{ color: "hsl(40 70% 55% / 0.6)", fontFamily: "'Source Sans 3', sans-serif", fontSize: 22, fontStyle: "italic" }}>
-          * Conteúdo customizado sob demanda
-        </p>
+    <div className="flex flex-col items-center justify-center h-full px-[120px]" style={{ background: "linear-gradient(135deg, hsl(220 50% 8%), hsl(220 35% 14%))" }}>
+      <div className="slide-label text-gold-gradient mb-[16px] animate-fade-in-up">Soluções</div>
+      <h2 className="slide-title text-center animate-fade-in-up delay-100" style={{ color: "hsl(40 20% 95%)" }}>
+        Palestras e <span className="text-gold-gradient">Workshops</span>
+      </h2>
+      <div className="w-[80px] h-[3px] my-[40px] animate-fade-in-up delay-200" style={{ background: "hsl(40 70% 55%)" }} />
+      <div className="grid grid-cols-3 gap-[30px] w-full max-w-[1600px]">
+        {[
+          { title: "Gestão da Pressão", desc: "Estresse, saúde e bem-estar" },
+          { title: "Saúde Mental", desc: "E prevenção de acidentes" },
+          { title: "Dependência Digital", desc: "E seus reflexos no trabalho e na vida" },
+          { title: "Saúde e Segurança", desc: "O papel de cada um" },
+          { title: "Saúde Mental", desc: "E vida financeira" },
+          { title: "Na Corda Bamba", desc: "Equilíbrio entre vida pessoal e trabalho" },
+        ].map((item, i) => (
+          <div key={i} className={`p-[40px] rounded-[16px] animate-fade-in-up delay-${(i + 2) * 100}`}
+            style={{ background: "hsl(220 20% 14%)", border: "1px solid hsl(220 15% 22%)" }}>
+            <div className="text-gold-gradient font-bold mb-[12px]" style={{ fontFamily: "'Playfair Display', serif", fontSize: 30 }}>{item.title}</div>
+            <div style={{ color: "hsl(220 10% 55%)", fontFamily: "'Source Sans 3', sans-serif", fontSize: 24 }}>{item.desc}</div>
+          </div>
+        ))}
       </div>
-      <div className="w-[600px] flex items-center justify-center animate-fade-in delay-300">
-        <img src="/images/vale.jpg" alt="Palestra Vale" className="w-[500px] h-[700px] object-cover rounded-[20px] shadow-2xl" />
-      </div>
+      <p className="mt-[40px] animate-fade-in-up delay-700" style={{ color: "hsl(40 70% 55% / 0.6)", fontFamily: "'Source Sans 3', sans-serif", fontSize: 22, fontStyle: "italic" }}>
+        * Conteúdo customizado sob demanda
+      </p>
     </div>
   </SlideLayout>
 );

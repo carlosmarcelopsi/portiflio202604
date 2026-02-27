@@ -5,7 +5,7 @@ import SlideCrisis from "./slides/SlideCrisis";
 import SlideHomeOffice from "./slides/SlideHomeOffice";
 import SlideWeight from "./slides/SlideWeight";
 import SlideImpact from "./slides/SlideImpact";
-import SlideAccident from "./slides/SlideAccident";
+
 import SlidePrepared from "./slides/SlidePrepared";
 import SlideValue from "./slides/SlideValue";
 import SlideMAIS from "./slides/SlideMAIS";
@@ -18,7 +18,7 @@ import SlideContact from "./slides/SlideContact";
 
 const slides = [
   SlideCover, SlideCrisis, SlideHomeOffice, SlideWeight, SlideImpact,
-  SlideAccident, SlidePrepared, SlideValue, SlideMAIS, SlideBio,
+  SlidePrepared, SlideValue, SlideMAIS, SlideBio,
   SlideClients, SlideMethodology, SlideWorkshops, SlideSolutions, SlideContact,
 ];
 
