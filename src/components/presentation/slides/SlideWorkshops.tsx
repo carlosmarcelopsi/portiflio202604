@@ -10,15 +10,16 @@ const SlideWorkshops = () => (
       <div className="w-[80px] h-[3px] my-[40px] animate-fade-in-up delay-200" style={{ background: "hsl(40 70% 55%)" }} />
       <div className="grid grid-cols-3 gap-[30px] w-full max-w-[1600px]">
         {[
-          { title: "Gestão da Pressão", desc: "Estresse, saúde e bem-estar" },
-          { title: "Saúde Mental", desc: "E prevenção de acidentes" },
-          { title: "Dependência Digital", desc: "E seus reflexos no trabalho e na vida" },
-          { title: "Saúde e Segurança", desc: "O papel de cada um" },
-          { title: "Saúde Mental", desc: "E vida financeira" },
-          { title: "Na Corda Bamba", desc: "Equilíbrio entre vida pessoal e trabalho" },
+          { icon: "🧠", title: "Gestão da Pressão", desc: "Estresse, saúde e bem-estar" },
+          { icon: "🛡️", title: "Saúde Mental", desc: "E prevenção de acidentes" },
+          { icon: "📱", title: "Dependência Digital", desc: "E seus reflexos no trabalho e na vida" },
+          { icon: "⚠️", title: "Saúde e Segurança", desc: "O papel de cada um" },
+          { icon: "💰", title: "Saúde Mental", desc: "E vida financeira" },
+          { icon: "⚖️", title: "Na Corda Bamba", desc: "Equilíbrio entre vida pessoal e trabalho" },
         ].map((item, i) => (
           <div key={i} className={`p-[40px] rounded-[16px] animate-fade-in-up delay-${(i + 2) * 100}`}
             style={{ background: "hsl(220 20% 14%)", border: "1px solid hsl(220 15% 22%)" }}>
+            <div className="text-[48px] mb-[20px]">{item.icon}</div>
             <div className="text-gold-gradient font-bold mb-[12px]" style={{ fontFamily: "'Playfair Display', serif", fontSize: 30 }}>{item.title}</div>
             <div style={{ color: "hsl(220 10% 55%)", fontFamily: "'Source Sans 3', sans-serif", fontSize: 24 }}>{item.desc}</div>
           </div>
