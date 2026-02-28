@@ -10,13 +10,18 @@ const SlideClients = () => (
         </h2>
       </div>
       <div className="flex-1 flex items-center px-[120px] gap-[60px]">
-        {/* Left: company logos as styled badges */}
+        {/* Left: company logos */}
         <div className="flex flex-col gap-[24px] w-[500px] animate-fade-in-up delay-200">
-          <div className="flex flex-wrap gap-[16px] justify-center">
-            {["VALE", "CESAN", "VIX LOGÍSTICA", "ESPIRAL ENGENHARIA", "CONCRENOVA"].map((name, i) => (
-              <div key={i} className="px-[32px] py-[20px] rounded-[12px] text-center"
-                style={{ background: "hsl(220 20% 14% / 0.9)", border: "1px solid hsl(40 70% 55% / 0.3)", backdropFilter: "blur(8px)", minWidth: 200 }}>
-                <span style={{ color: "hsl(40 70% 55%)", fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 700, letterSpacing: 2 }}>{name}</span>
+          <div className="flex flex-wrap gap-[16px] justify-center items-center">
+            {[
+              { src: "/images/logo-vale.png", alt: "Vale" },
+              { src: "/images/logo-cesan.jpg", alt: "CESAN" },
+              { src: "/images/logo-vix.png", alt: "VIX Logística" },
+              { src: "/images/logo-espiral.jpg", alt: "Espiral Engenharia" },
+            ].map((logo, i) => (
+              <div key={i} className="px-[24px] py-[16px] rounded-[12px] flex items-center justify-center"
+                style={{ background: "hsl(0 0% 100% / 0.95)", minWidth: 200, minHeight: 80 }}>
+                <img src={logo.src} alt={logo.alt} className="h-[50px] object-contain" />
               </div>
             ))}
           </div>

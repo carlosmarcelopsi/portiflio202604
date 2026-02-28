@@ -1,7 +1,7 @@
 import SlideLayout from "../SlideLayout";
 
 const SlidePrepared = () => (
-  <SlideLayout backgroundImage="/images/industrial-workers.jpg" overlay="gradient-left">
+  <SlideLayout backgroundImage="/images/industrial-workers-pensive.jpg" overlay="gradient-left">
     <div className="flex h-full">
       <div className="w-[55%] flex flex-col justify-center px-[120px]">
         <h2 className="slide-title animate-fade-in-up" style={{ color: "hsl(40 20% 95%)" }}>
@@ -20,6 +20,13 @@ const SlidePrepared = () => (
             </div>
           ))}
         </div>
+        <div className="w-[120px] h-[3px] my-[50px] animate-fade-in-up delay-500" style={{ background: "hsl(40 70% 55%)" }} />
+        <h2 className="slide-title animate-fade-in-up delay-600" style={{ color: "hsl(40 20% 95%)" }}>
+          Qual o valor de líderes<br /><span className="text-gold-gradient">capacitados e engajados?</span>
+        </h2>
+        <h2 className="slide-title mt-[30px] animate-fade-in-up delay-700" style={{ color: "hsl(40 20% 95%)" }}>
+          E equipes <span className="text-gold-gradient">preparadas<br />e produtivas?</span>
+        </h2>
       </div>
     </div>
   </SlideLayout>
