@@ -4,22 +4,30 @@ import SlideCover from "./slides/SlideCover";
 import SlideCrisis from "./slides/SlideCrisis";
 import SlideHomeOffice from "./slides/SlideHomeOffice";
 import SlideWeight from "./slides/SlideWeight";
-import SlideImpact from "./slides/SlideImpact";
-
 import SlidePrepared from "./slides/SlidePrepared";
-import SlideValue from "./slides/SlideValue";
 import SlideMAIS from "./slides/SlideMAIS";
+import SlideMethodology from "./slides/SlideMethodology";
 import SlideBio from "./slides/SlideBio";
 import SlideClients from "./slides/SlideClients";
-import SlideMethodology from "./slides/SlideMethodology";
-import SlideWorkshops from "./slides/SlideWorkshops";
+import SlideDepoimentos from "./slides/SlideDepoimentos";
 import SlideSolutions from "./slides/SlideSolutions";
+import SlideWorkshops from "./slides/SlideWorkshops";
 import SlideContact from "./slides/SlideContact";
 
 const slides = [
-  SlideCover, SlideCrisis, SlideHomeOffice, SlideWeight, SlideImpact,
-  SlidePrepared, SlideValue, SlideMAIS, SlideBio,
-  SlideClients, SlideMethodology, SlideWorkshops, SlideSolutions, SlideContact,
+  SlideCover,        // 1
+  SlideCrisis,       // 2
+  SlideHomeOffice,   // 3
+  SlideWeight,       // 4 (merged with Impact)
+  SlidePrepared,     // 5 (merged with Value, new industrial bg)
+  SlideMAIS,         // 6
+  SlideMethodology,  // 7 (moved before Bio)
+  SlideBio,          // 8
+  SlideClients,      // 9
+  SlideDepoimentos,  // 10 (new)
+  SlideSolutions,    // 11 (modified)
+  SlideWorkshops,    // 12 (moved after Solutions)
+  SlideContact,      // 13
 ];
 
 const PresentationViewer = () => {
@@ -38,7 +46,6 @@ const PresentationViewer = () => {
   }, []);
 
   useEffect(() => {
-    // Run scale on mount and after a short delay for iframe sizing
     updateScale();
     const t = setTimeout(updateScale, 100);
     window.addEventListener("resize", updateScale);
@@ -91,7 +98,6 @@ const PresentationViewer = () => {
       onMouseMove={handleMouseMove}
       onClick={next}
     >
-      {/* Scaled slide */}
       <div
         style={{
           position: "absolute",
@@ -107,12 +113,10 @@ const PresentationViewer = () => {
         <CurrentSlide />
       </div>
 
-      {/* Controls overlay */}
       <div
         className="absolute inset-0 z-50 pointer-events-none transition-opacity duration-500"
         style={{ opacity: showControls ? 1 : 0 }}
       >
-        {/* Bottom bar */}
         <div className="absolute bottom-[24px] left-1/2 -translate-x-1/2 flex items-center gap-[16px] pointer-events-auto"
           style={{ background: "hsl(220 20% 14% / 0.9)", borderRadius: 999, padding: "10px 24px", backdropFilter: "blur(12px)" }}>
           <button onClick={(e) => { e.stopPropagation(); prev(); }} disabled={current === 0}
@@ -137,7 +141,6 @@ const PresentationViewer = () => {
           </button>
         </div>
 
-        {/* Slide thumbnails strip */}
         <div className="absolute bottom-[80px] left-1/2 -translate-x-1/2 flex gap-[6px] pointer-events-auto">
           {slides.map((_, i) => (
             <button key={i} onClick={(e) => { e.stopPropagation(); setCurrent(i); }}
