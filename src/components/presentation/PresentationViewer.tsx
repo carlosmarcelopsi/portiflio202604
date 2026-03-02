@@ -4,12 +4,13 @@ import SlideCover from "./slides/SlideCover";
 import SlideCrisis from "./slides/SlideCrisis";
 import SlideHomeOffice from "./slides/SlideHomeOffice";
 import SlideWeight from "./slides/SlideWeight";
+import SlideNR1 from "./slides/SlideNR1";
 import SlidePrepared from "./slides/SlidePrepared";
+import SlideLeaders from "./slides/SlideLeaders";
 import SlideMAIS from "./slides/SlideMAIS";
 import SlideMethodology from "./slides/SlideMethodology";
 import SlideBio from "./slides/SlideBio";
 import SlideClients from "./slides/SlideClients";
-import SlideDepoimentos from "./slides/SlideDepoimentos";
 import SlideSolutions from "./slides/SlideSolutions";
 import SlideWorkshops from "./slides/SlideWorkshops";
 import SlideContact from "./slides/SlideContact";
@@ -18,16 +19,17 @@ const slides = [
   SlideCover,        // 1
   SlideCrisis,       // 2
   SlideHomeOffice,   // 3
-  SlideWeight,       // 4 (merged with Impact)
-  SlidePrepared,     // 5 (merged with Value, new industrial bg)
-  SlideMAIS,         // 6
-  SlideMethodology,  // 7 (moved before Bio)
-  SlideBio,          // 8
-  SlideClients,      // 9
-  SlideDepoimentos,  // 10 (new)
-  SlideSolutions,    // 11 (modified)
-  SlideWorkshops,    // 12 (moved after Solutions)
-  SlideContact,      // 13
+  SlideWeight,       // 4
+  SlideNR1,          // 5 (NEW)
+  SlidePrepared,     // 6
+  SlideLeaders,      // 7 (NEW)
+  SlideMAIS,         // 8
+  SlideMethodology,  // 9
+  SlideBio,          // 10
+  SlideClients,      // 11
+  SlideSolutions,    // 12
+  SlideWorkshops,    // 13
+  SlideContact,      // 14
 ];
 
 const PresentationViewer = () => {
