@@ -2,7 +2,7 @@ import SlideLayout from "../SlideLayout";
 
 const SlideCover = () => (
   <SlideLayout backgroundImage="/images/hero-bg.jpg" overlay="dark">
-     <div className="flex h-full">
+    <div className="flex h-full">
       {/* Left content */}
       <div className="flex-1 flex flex-col justify-center px-[120px]">
         <div className="animate-fade-in-up">
@@ -18,6 +18,14 @@ const SlideCover = () => (
             Soluções em psicologia para cuidar de pessoas<br />e multiplicar resultados
           </p>
         </div>
+      </div>
+      {/* Right: profile photo */}
+      <div className="w-[550px] relative flex items-end justify-center animate-fade-in delay-200">
+        <img
+          src="/images/profile-nobg-04.png"
+          alt="Carlos Marcelo"
+          className="h-[950px] object-cover object-top"
+        />
       </div>
     </div>
   </SlideLayout>

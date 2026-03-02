@@ -1,42 +1,41 @@
 import SlideLayout from "../SlideLayout";
 
+const clients = [
+  { photo: "/images/vale.jpg", logo: "/images/logo-vale.png", alt: "Vale" },
+  { photo: "/images/cesan.jpg", logo: "/images/logo-cesan.jpg", alt: "CESAN" },
+  { photo: "/images/vix.jpg", logo: "/images/logo-vix.png", alt: "VIX Logística" },
+  { photo: "/images/espiral.jpg", logo: "/images/logo-espiral.jpg", alt: "Espiral Engenharia" },
+];
+
 const SlideClients = () => (
   <SlideLayout backgroundImage="/images/tribuna.jpg" overlay="dark">
     <div className="flex flex-col h-full">
-      <div className="px-[120px] pt-[80px]">
+      <div className="px-[120px] pt-[80px] text-center">
         <div className="slide-label text-gold-gradient mb-[16px] animate-fade-in-up">Trajetória</div>
         <h2 className="slide-title animate-fade-in-up delay-100" style={{ color: "hsl(40 20% 95%)" }}>
           Experiências e <span className="text-gold-gradient">Clientes</span>
         </h2>
       </div>
-      <div className="flex-1 flex items-center px-[120px] gap-[60px]">
-        {/* Left: company logos */}
-        <div className="flex flex-col gap-[24px] w-[500px] animate-fade-in-up delay-200">
-          <div className="flex flex-wrap gap-[16px] justify-center items-center">
-            {[
-              { src: "/images/logo-vale.png", alt: "Vale" },
-              { src: "/images/logo-cesan.jpg", alt: "CESAN" },
-              { src: "/images/logo-vix.png", alt: "VIX Logística" },
-              { src: "/images/logo-espiral.jpg", alt: "Espiral Engenharia" },
-            ].map((logo, i) => (
-              <div key={i} className="px-[24px] py-[16px] rounded-[12px] flex items-center justify-center"
-                style={{ background: "hsl(0 0% 100% / 0.95)", minWidth: 200, minHeight: 80 }}>
-                <img src={logo.src} alt={logo.alt} className="h-[50px] object-contain" />
+      <div className="flex-1 flex items-center justify-center px-[100px]">
+        <div className="grid grid-cols-2 gap-[24px] w-full max-w-[1500px] animate-fade-in delay-300">
+          {clients.map((client, i) => (
+            <div key={i} className="relative rounded-[16px] overflow-hidden" style={{ height: 360 }}>
+              <img src={client.photo} alt={client.alt} className="w-full h-full object-cover" />
+              {/* Logo overlay */}
+              <div className="absolute inset-x-0 bottom-0 flex items-center justify-center py-[20px]"
+                style={{ background: "linear-gradient(0deg, hsl(220 40% 8% / 0.85) 0%, transparent 100%)" }}>
+                <div className="px-[24px] py-[10px] rounded-[8px] flex items-center justify-center"
+                  style={{ background: "hsl(0 0% 100% / 0.9)", minWidth: 160 }}>
+                  <img src={client.logo} alt={client.alt} className="h-[40px] object-contain" />
+                </div>
               </div>
-            ))}
-          </div>
-          <p className="text-center animate-fade-in-up delay-400" style={{ color: "hsl(220 10% 60%)", fontFamily: "'Source Sans 3', sans-serif", fontSize: 24, fontStyle: "italic" }}>
-            entre outros
-          </p>
-        </div>
-        {/* Right: photo grid */}
-        <div className="flex-1 grid grid-cols-2 gap-[16px] animate-fade-in delay-400">
-          <img src="/images/vale.jpg" alt="Palestra Vale" className="w-full h-[280px] object-cover rounded-[12px]" />
-          <img src="/images/cesan.jpg" alt="Palestra CESAN" className="w-full h-[280px] object-cover rounded-[12px]" />
-          <img src="/images/espiral.jpg" alt="Espiral Engenharia" className="w-full h-[280px] object-cover rounded-[12px]" />
-          <img src="/images/vix.jpg" alt="VIX Logística" className="w-full h-[280px] object-cover rounded-[12px]" />
+            </div>
+          ))}
         </div>
       </div>
+      <p className="text-center pb-[30px] animate-fade-in-up delay-500" style={{ color: "hsl(220 10% 50%)", fontFamily: "'Source Sans 3', sans-serif", fontSize: 22, fontStyle: "italic" }}>
+        entre outros
+      </p>
     </div>
   </SlideLayout>
 );
