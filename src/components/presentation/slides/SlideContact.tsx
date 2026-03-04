@@ -4,10 +4,10 @@ const SlideContact = () => (
   <SlideLayout>
     <div className="flex h-full" style={{ background: "linear-gradient(135deg, hsl(220 50% 8%), hsl(220 35% 14%))" }}>
       <div className="flex-1 flex flex-col justify-center px-[120px]">
-        <div className="slide-label text-gold-gradient mb-[20px] animate-fade-in-up">Vamos conversar?</div>
-        <h2 className="slide-title-lg animate-fade-in-up delay-100" style={{ color: "hsl(40 20% 95%)" }}>
-          AGENDE UMA<br /><span className="text-gold-gradient">REUNIÃO</span>
+        <h2 className="slide-title-lg text-gold-gradient mb-[40px] animate-fade-in-up">
+          Líderes que resolvem<br />Times que entregam
         </h2>
+        <div className="slide-label text-gold-gradient mb-[20px] animate-fade-in-up delay-100">Vamos conversar?</div>
         <div className="w-[120px] h-[4px] my-[30px] animate-fade-in-up delay-200" style={{ background: "hsl(40 70% 55%)" }} />
         <p className="slide-subtitle animate-fade-in-up delay-300 mb-[40px]" style={{ color: "hsl(40 20% 90%)" }}>
           Agende uma reunião e encontre sua solução.
@@ -39,7 +39,8 @@ const SlideContact = () => (
       </div>
       {/* Right side: photo */}
       <div className="w-[500px] relative flex items-end justify-center animate-fade-in delay-400">
-        <img src="/images/profile-nobg-03.png" alt="Carlos Marcelo" className="h-[900px] object-cover object-top" />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, hsl(220 50% 8%), hsl(220 35% 14%))" }} />
+        <img src="/images/profile-nobg-03.png" alt="Carlos Marcelo" className="relative z-10 h-[900px] object-cover object-top" />
         <div className="absolute bottom-[40px] right-[40px] z-20" style={{
           fontFamily: "'Playfair Display', serif",
           fontSize: 100,

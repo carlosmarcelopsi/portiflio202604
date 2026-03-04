@@ -11,7 +11,7 @@ const SlideWeight = () => (
       <div className="flex gap-[36px] justify-center">
         {[
           { icon: "💰", label: "Financeiro", desc: "Custos com absenteísmo, afastamentos, turnover, multas por fiscalizações" },
-          { icon: "📉", label: "Produtividade", desc: "Queda de performance e engajamento das equipes" },
+          { icon: "📉", label: "Produtividade", desc: "Queda no engajamento, performance e resultados dos líderes e dos times" },
           { icon: "⚖️", label: "Jurídico", desc: "Riscos trabalhistas, responsabilidade civil, processos e indenizações" },
           { icon: "💼", label: "Negócio", desc: "Perda de clientes, danos à reputação, não retenção de talentos" },
         ].map((item, i) => (

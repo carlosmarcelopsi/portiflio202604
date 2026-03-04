@@ -4,13 +4,13 @@ import SlideCover from "./slides/SlideCover";
 import SlideCrisis from "./slides/SlideCrisis";
 import SlideHomeOffice from "./slides/SlideHomeOffice";
 import SlideWeight from "./slides/SlideWeight";
-import SlideNR1 from "./slides/SlideNR1";
 import SlidePrepared from "./slides/SlidePrepared";
 import SlideLeaders from "./slides/SlideLeaders";
 import SlideMAIS from "./slides/SlideMAIS";
 import SlideMethodology from "./slides/SlideMethodology";
 import SlideBio from "./slides/SlideBio";
 import SlideClients from "./slides/SlideClients";
+import SlideTestimonials from "./slides/SlideTestimonials";
 import SlideSolutions from "./slides/SlideSolutions";
 import SlideWorkshops from "./slides/SlideWorkshops";
 import SlideContact from "./slides/SlideContact";
@@ -20,13 +20,13 @@ const slides = [
   SlideCrisis,       // 2
   SlideHomeOffice,   // 3
   SlideWeight,       // 4
-  SlideNR1,          // 5 (NEW)
-  SlidePrepared,     // 6
-  SlideLeaders,      // 7 (NEW)
-  SlideMAIS,         // 8
-  SlideMethodology,  // 9
-  SlideBio,          // 10
-  SlideClients,      // 11
+  SlidePrepared,     // 5
+  SlideLeaders,      // 6
+  SlideMAIS,         // 7
+  SlideMethodology,  // 8
+  SlideBio,          // 9
+  SlideClients,      // 10
+  SlideTestimonials, // 11 (NEW)
   SlideSolutions,    // 12
   SlideWorkshops,    // 13
   SlideContact,      // 14
