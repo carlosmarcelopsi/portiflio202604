@@ -1,7 +1,7 @@
 import SlideLayout from "../SlideLayout";
 
 const SlideMethodology = () => (
-  <SlideLayout backgroundImage="/images/hero-bg.jpg" overlay="dark">
+  <SlideLayout backgroundImage="/images/foto-apresentacao-01.png" overlay="dark">
     <div className="flex flex-col h-full px-[120px] pt-[80px]">
       <div className="text-center mb-[40px]">
         <div className="slide-label text-gold-gradient mb-[16px] animate-fade-in-up">Abordagem exclusiva</div>

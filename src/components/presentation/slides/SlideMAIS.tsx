@@ -10,7 +10,7 @@ const SlideMAIS = () => (
         <div className="w-[80px] h-[3px] my-[40px] animate-fade-in-up delay-100" style={{ background: "hsl(40 70% 55%)" }} />
         <div className="space-y-[28px]">
           {[
-            "Identificar e gerenciar riscos psicossociais — NR1",
+            "Gerenciar riscos psicossociais — NR 1",
             "Reduzir afastamentos — CID F",
             "Prevenir acidentes",
             "Minimizar riscos jurídicos e trabalhistas",
