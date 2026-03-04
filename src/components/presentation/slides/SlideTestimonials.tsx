@@ -9,7 +9,7 @@ const testimonials = [
   {
     quote: "Considero o trabalho do Carlos Marcelo fundamental para esse momento que vemos de tanto desequilíbrio com a saúde geral dos empregados de todas as empresas, sejam eles o nível chão de fábrica, quantos seus dirigentes ou diretores. Recomendo sem sombra de dúvidas.",
     authors: ["Marcos Ramos — Gerente da área de serviços ambientais"],
-    company: "Tubarão-ES",
+    company: "VALE Tubarão – ES",
   },
   {
     quote: "",
@@ -34,7 +34,7 @@ const SlideTestimonials = () => (
             style={{ background: "hsl(220 20% 14% / 0.7)", border: "1px solid hsl(220 15% 22%)" }}>
             {item.empty ? (
               <div className="flex-1 flex items-center justify-center">
-                <p style={{ color: "hsl(220 10% 35%)", fontFamily: "'Source Sans 3', sans-serif", fontSize: 24, fontStyle: "italic" }}>
+                <p style={{ color: "hsl(220 10% 35%)", fontFamily: "'Source Sans 3', sans-serif", fontSize: 28, fontStyle: "italic" }}>
                   Espaço reservado para depoimento
                 </p>
               </div>
@@ -42,17 +42,17 @@ const SlideTestimonials = () => (
               <>
                 <div>
                   <div className="text-gold-gradient mb-[20px]" style={{ fontFamily: "'Playfair Display', serif", fontSize: 60, lineHeight: 1 }}>"</div>
-                  <p style={{ color: "hsl(40 20% 90%)", fontFamily: "'Source Sans 3', sans-serif", fontSize: 22, lineHeight: 1.6 }}>
+                  <p style={{ color: "hsl(40 20% 90%)", fontFamily: "'Source Sans 3', sans-serif", fontSize: 26, lineHeight: 1.5 }}>
                     {item.quote}
                   </p>
                 </div>
                 <div className="mt-[28px] pt-[20px]" style={{ borderTop: "1px solid hsl(40 70% 55% / 0.2)" }}>
                   {item.authors.map((author, j) => (
-                    <p key={j} style={{ color: "hsl(40 70% 55%)", fontFamily: "'Source Sans 3', sans-serif", fontSize: 20, fontWeight: 600 }}>
+                    <p key={j} style={{ color: "hsl(40 70% 55%)", fontFamily: "'Source Sans 3', sans-serif", fontSize: 22, fontWeight: 600 }}>
                       {author}
                     </p>
                   ))}
-                  <p style={{ color: "hsl(220 10% 50%)", fontFamily: "'Source Sans 3', sans-serif", fontSize: 18, fontStyle: "italic", marginTop: 6 }}>
+                  <p style={{ color: "hsl(40 70% 55%)", fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 800, marginTop: 8, letterSpacing: "0.03em" }}>
                     {item.company}
                   </p>
                 </div>

@@ -38,8 +38,7 @@ const SlideContact = () => (
         </div>
       </div>
       {/* Right side: photo */}
-      <div className="w-[500px] relative flex items-end justify-center animate-fade-in delay-400">
-        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, hsl(220 50% 8%), hsl(220 35% 14%))" }} />
+      <div className="w-[500px] relative flex items-end justify-center animate-fade-in delay-400" style={{ background: "hsl(220 45% 11%)" }}>
         <img src="/images/profile-nobg-03.png" alt="Carlos Marcelo" className="relative z-10 h-[900px] object-cover object-top" />
         <div className="absolute bottom-[40px] right-[40px] z-20" style={{
           fontFamily: "'Playfair Display', serif",

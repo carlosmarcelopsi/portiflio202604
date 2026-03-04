@@ -4,7 +4,7 @@ const SlideBio = () => (
   <SlideLayout>
     <div className="flex h-full" style={{ background: "linear-gradient(135deg, hsl(220 50% 8%), hsl(220 35% 14%))" }}>
       {/* Photo */}
-      <div className="w-[600px] flex items-center justify-center animate-fade-in">
+      <div className="w-[600px] flex items-center justify-center animate-fade-in" style={{ background: "hsl(220 45% 11%)" }}>
         <img src="/images/profile-nobg-04.png" alt="Carlos Marcelo" className="h-[900px] object-cover rounded-[20px]" />
       </div>
       {/* Bio */}
