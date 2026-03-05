@@ -1,5 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import { ChevronLeft, ChevronRight, Maximize, Minimize } from "lucide-react";
+import { ChevronLeft, ChevronRight, Maximize, Minimize, Download, Loader2 } from "lucide-react";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 import SlideCover from "./slides/SlideCover";
 import SlideCrisis from "./slides/SlideCrisis";
 import SlideHomeOffice from "./slides/SlideHomeOffice";
@@ -37,8 +39,50 @@ const PresentationViewer = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [scale, setScale] = useState(0.5);
   const [showControls, setShowControls] = useState(true);
+  const [exporting, setExporting] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const hideTimer = useRef<ReturnType<typeof setTimeout>>();
+
+  const exportPDF = useCallback(async () => {
+    setExporting(true);
+    try {
+      const pdf = new jsPDF({ orientation: "landscape", unit: "px", format: [1920, 1080] });
+      const offscreen = document.createElement("div");
+      offscreen.style.cssText = "position:fixed;left:-9999px;top:0;width:1920px;height:1080px;overflow:hidden;z-index:-1;";
+      document.body.appendChild(offscreen);
+
+      for (let i = 0; i < slides.length; i++) {
+        if (i > 0) pdf.addPage([1920, 1080], "landscape");
+        const SlideComp = slides[i];
+        const { createRoot } = await import("react-dom/client");
+        const wrapper = document.createElement("div");
+        wrapper.style.cssText = "width:1920px;height:1080px;position:relative;";
+        offscreen.innerHTML = "";
+        offscreen.appendChild(wrapper);
+
+        await new Promise<void>((resolve) => {
+          const root = createRoot(wrapper);
+          root.render(<SlideComp />);
+          setTimeout(() => resolve(), 800);
+        });
+
+        const canvas = await html2canvas(wrapper, {
+          width: 1920, height: 1080, scale: 1,
+          useCORS: true, allowTaint: true,
+          backgroundColor: null,
+        });
+        const imgData = canvas.toDataURL("image/jpeg", 0.92);
+        pdf.addImage(imgData, "JPEG", 0, 0, 1920, 1080);
+      }
+
+      document.body.removeChild(offscreen);
+      pdf.save("apresentacao-carlos-marcelo.pdf");
+    } catch (err) {
+      console.error("PDF export error:", err);
+    } finally {
+      setExporting(false);
+    }
+  }, []);
 
   const updateScale = useCallback(() => {
     const w = containerRef.current?.clientWidth || window.innerWidth;
@@ -135,6 +179,11 @@ const PresentationViewer = () => {
             <ChevronRight size={24} />
           </button>
           <div className="w-[1px] h-[20px] mx-[4px]" style={{ background: "hsl(220 15% 30%)" }} />
+          <button onClick={(e) => { e.stopPropagation(); exportPDF(); }}
+            disabled={exporting}
+            className="p-[6px] rounded-full disabled:opacity-50" style={{ color: "hsl(40 20% 90%)" }}>
+            {exporting ? <Loader2 size={20} className="animate-spin" /> : <Download size={20} />}
+          </button>
           <button onClick={(e) => {
             e.stopPropagation();
             isFullscreen ? document.exitFullscreen() : containerRef.current?.requestFullscreen();
