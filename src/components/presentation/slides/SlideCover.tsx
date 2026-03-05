@@ -3,9 +3,8 @@ import SlideLayout from "../SlideLayout";
 const SlideCover = () => (
   <SlideLayout backgroundImage="/images/foto-apresentacao-01.png" overlay="dark">
     <div className="flex h-full">
-      <div className="flex-1 flex flex-col justify-center px-[120px]">
+      <div className="flex-1 flex flex-col justify-end px-[120px] pb-[120px]">
         <div className="animate-fade-in-up">
-          <div className="slide-label text-gold-gradient mb-[20px]">Psicólogo</div>
           <h1 className="slide-title-lg" style={{ color: "hsl(40 20% 95%)" }}>
             CARLOS<br />MARCELO
           </h1>
