@@ -15,7 +15,7 @@ const SlideLeaders = () => (
         <span className="text-gold-gradient">TIMES QUE ENTREGAM</span>{" "}
         resultados são{" "}
         <span style={{ color: "hsl(0 0% 100%)" }}>saudáveis</span>,{" "}
-        <span className="text-gold-gradient">engajados</span> e preparados
+        preparados e <span className="text-gold-gradient">engajados</span>
       </h2>
     </div>
   </SlideLayout>

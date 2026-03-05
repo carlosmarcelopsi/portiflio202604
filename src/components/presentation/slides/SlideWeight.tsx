@@ -3,12 +3,12 @@ import SlideLayout from "../SlideLayout";
 const SlideWeight = () => (
   <SlideLayout backgroundImage="/images/accident-bg.jpg" overlay="dark">
     <div className="flex flex-col items-center h-full px-[80px]">
-      <div className="text-center animate-scale-in pt-[40px] mb-[20px]">
+      <div className="text-center animate-scale-in pt-[80px] mb-[40px]">
         <h2 className="slide-title text-gold-gradient leading-tight">
           O peso de um adoecimento,<br />assédio ou afastamento
         </h2>
       </div>
-      <div className="flex-1 flex items-end pb-[60px]">
+      <div className="flex-1 flex items-center">
         <div className="flex gap-[36px] justify-center">
           {[
             { icon: "💰", label: "Financeiro", desc: "Custos com absenteísmo, afastamentos, turnover, multas por fiscalizações" },

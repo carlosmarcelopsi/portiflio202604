@@ -2,15 +2,15 @@ import SlideLayout from "../SlideLayout";
 
 const SlideMethodology = () => (
   <SlideLayout backgroundImage="/images/foto-apresentacao-01.png" overlay="dark">
-    <div className="flex flex-col h-full px-[120px] pt-[80px]">
-      <div className="text-center mb-[40px]">
+    <div className="flex flex-col h-full px-[120px] pt-[60px]">
+      <div className="text-center mb-[20px]">
         <div className="slide-label text-gold-gradient mb-[16px] animate-fade-in-up">Abordagem exclusiva</div>
         <h2 className="slide-title animate-fade-in-up delay-100" style={{ color: "hsl(40 20% 95%)" }}>
           Metodologia <span className="text-gold-gradient">M.A.I.S.</span>
         </h2>
       </div>
-      <div className="w-[80px] h-[3px] mx-auto mb-[60px] animate-fade-in-up delay-200" style={{ background: "hsl(40 70% 55%)" }} />
-      <div className="flex gap-[40px] justify-center">
+      <div className="w-[80px] h-[3px] mx-auto mb-[20px] animate-fade-in-up delay-200" style={{ background: "hsl(40 70% 55%)" }} />
+      <div className="flex-1 flex gap-[40px] justify-center items-end pb-[60px]">
         {[
           { letter: "M", word: "Mapear", desc: "Diagnóstico e identificação dos riscos e necessidades" },
           { letter: "A", word: "Analisar", desc: "Análise profunda dos dados e contexto organizacional" },
