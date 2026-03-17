@@ -33,7 +33,7 @@ const SlideTestimonials = () => (
             style={{ background: "hsl(220 20% 14% / 0.7)", border: "1px solid hsl(220 15% 22%)" }}>
             <div>
               <div className="text-gold-gradient mb-[20px]" style={{ fontFamily: "'Playfair Display', serif", fontSize: 60, lineHeight: 1 }}>"</div>
-              <p style={{ color: "hsl(40 20% 90%)", fontFamily: "'Source Sans 3', sans-serif", fontSize: 24, lineHeight: 1.5 }}>
+              <p style={{ color: "hsl(40 20% 90%)", fontFamily: "'Source Sans 3', sans-serif", fontSize: 27, lineHeight: 1.45 }}>
                 {item.quote}
               </p>
             </div>

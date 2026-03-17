@@ -16,7 +16,7 @@ const SlideBio = () => (
             ["Graduação em Psicologia e Teologia", "MBA em Administração e Gestão do Conhecimento"],
             ["Pós-graduando em Psicologia Organizacional e Gestão de Pessoas", "Terapia Cognitivo Comportamental"],
             ["Executive Coaching", "Psicologia Positiva"],
-            ["EMDR e Brainspotting"],
+            ["EMDR e Brainspotting", "Analista DISC – PROFILER – MAPA"],
           ].flat().map((item, i) => (
             <div key={i} className={`flex items-center gap-[14px] animate-fade-in-up delay-${Math.min((i + 3) * 100, 700)}`}>
               <div className="w-[10px] h-[10px] rounded-full flex-shrink-0" style={{ background: "hsl(40 70% 55%)" }} />
