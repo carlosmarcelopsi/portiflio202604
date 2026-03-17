@@ -25,7 +25,7 @@ const SlideCover = () => (
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}>
-            Líderes que resolvem –<br />Equipes que entregam
+            Líderes que resolvem<br />Equipes que entregam
           </p>
           <p style={{
             fontFamily: "'Source Sans 3', sans-serif",
