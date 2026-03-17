@@ -5,7 +5,7 @@ const SlideContact = () => (
     <div className="flex h-full">
       <div className="flex-1 flex flex-col justify-end pb-[80px] px-[120px]">
         <h2 className="slide-title-lg text-gold-gradient mb-[30px] animate-fade-in-up">
-          Líderes que resolvem<br />Times que entregam
+          Mental +
         </h2>
         <div className="w-[120px] h-[4px] my-[20px] animate-fade-in-up delay-100" style={{ background: "hsl(40 70% 55%)" }} />
         <p className="slide-subtitle animate-fade-in-up delay-200 mb-[30px]" style={{ color: "hsl(40 20% 90%)" }}>

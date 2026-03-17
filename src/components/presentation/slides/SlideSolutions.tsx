@@ -13,7 +13,7 @@ const SlideSolutions = () => (
           { icon: "🎯", title: "Coaching Executivo", desc: "Desenvolvimento de competências comportamentais para líderes" },
           { icon: "🛡️", title: "Consultoria em Saúde Mental", desc: "Saúde mental e segurança do trabalho integradas" },
           { icon: "🚀", title: "Desenvolvimento de Competências", desc: "Capacitação estratégica de equipes para alta performance e colaboração" },
-          { icon: "📊", title: "Avaliações Psicológicas", desc: "Assessments comportamentais e psicodiagnósticos" },
+          { icon: "🤝", title: "Team Building", desc: "Dinâmicas e estratégias para fortalecer a coesão, confiança e colaboração entre equipes" },
           { icon: "🚨", title: "Atendimento em Emergências", desc: "Suporte psicológico em crises, emergências e desastres" },
         ].map((item, i) => (
           <div key={i} className={`p-[40px] rounded-[16px] animate-fade-in-up delay-${(i + 2) * 100}`}

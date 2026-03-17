@@ -76,7 +76,7 @@ const PresentationViewer = () => {
       }
 
       document.body.removeChild(offscreen);
-      pdf.save("apresentacao-carlos-marcelo.pdf");
+      pdf.save("apresentacao-mental-mais.pdf");
     } catch (err) {
       console.error("PDF export error:", err);
     } finally {
