@@ -7,7 +7,7 @@ const SlideLeaders = () => (
         <span className="text-gold-gradient">LÍDERES QUE RESOLVEM</span>{" "}
         são aqueles que{" "}
         <span style={{ color: "hsl(0 0% 100%)" }}>inspiram</span>,{" "}
-        capacitam e alavancam a{" "}
+        capacitam e alavancam a<br />
         <span className="text-gold-gradient">produtividade</span>
       </h2>
       <div className="w-[120px] h-[4px] animate-fade-in-up delay-200" style={{ background: "hsl(40 70% 55%)" }} />

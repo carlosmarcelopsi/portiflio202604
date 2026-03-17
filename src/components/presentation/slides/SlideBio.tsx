@@ -16,7 +16,7 @@ const SlideBio = () => (
           {[
             "Graduação em Psicologia e Teologia",
             "MBA em Administração e Gestão do Conhecimento",
-            "Pós-graduando em Psicologia Organizacional",
+            "Pós-graduando em Psicologia Organizacional e Gestão de Pessoas",
             "Terapia Cognitivo Comportamental",
             "Executive Coaching",
             "Psicologia Positiva",
