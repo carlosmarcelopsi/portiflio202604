@@ -12,8 +12,8 @@ const SlideMethodology = () => (
       <div className="w-[80px] h-[3px] mx-auto mb-[20px] animate-fade-in-up delay-200" style={{ background: "hsl(40 70% 55%)" }} />
       <div className="flex-1 flex gap-[40px] justify-center items-end pb-[60px]">
         {[
-          { letter: "M", word: "Mapear", desc: "Diagnóstico e identificação dos riscos e necessidades" },
-          { letter: "A", word: "Analisar", desc: "Análise profunda dos dados e contexto organizacional" },
+          { letter: "M", word: "Mapear", desc: "Diagnóstico e identificação dos riscos e necessidades das equipes e lideranças" },
+          { letter: "A", word: "Analisar", desc: "Análise profunda dos dados e contexto organizacional. Preparação do plano de ação" },
           { letter: "I", word: "Intervir", desc: "Ações estratégicas e intervenções personalizadas" },
           { letter: "S", word: "Sustentar", desc: "Acompanhamento contínuo e sustentabilidade dos resultados" },
         ].map((item, i) => (

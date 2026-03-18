@@ -1,7 +1,7 @@
 import SlideLayout from "../SlideLayout";
 
 const SlideCover = () => (
-  <SlideLayout backgroundImage="/images/executive-woman-bg.jpg" overlay="dark">
+  <SlideLayout backgroundImage="/images/executive-woman-bg.jpg" overlay="custom-light">
     <div className="flex h-full">
       <div className="flex-1 flex flex-col justify-end px-[120px] pb-[100px]">
         <div className="animate-fade-in-up">
