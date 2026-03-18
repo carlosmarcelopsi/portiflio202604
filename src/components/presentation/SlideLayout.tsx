@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 interface SlideLayoutProps {
   children: ReactNode;
   backgroundImage?: string;
-  overlay?: "dark" | "gradient-left" | "gradient-bottom" | "none";
+  overlay?: "dark" | "gradient-left" | "gradient-bottom" | "custom-light" | "none";
   className?: string;
 }
 
