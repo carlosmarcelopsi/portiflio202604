@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 interface SlideLayoutProps {
   children: ReactNode;
   backgroundImage?: string;
-  overlay?: "dark" | "gradient-left" | "gradient-bottom" | "none";
+  overlay?: "dark" | "gradient-left" | "gradient-bottom" | "custom-light" | "none";
   className?: string;
 }
 
@@ -21,6 +21,7 @@ const SlideLayout = ({ children, backgroundImage, overlay = "none", className = 
         <div className={`absolute inset-0 ${
           overlay === "dark" ? "overlay-dark" : 
           overlay === "gradient-left" ? "overlay-gradient-left" : 
+          overlay === "custom-light" ? "overlay-light" :
           "overlay-gradient-bottom"
         }`} />
       )}

@@ -1,7 +1,7 @@
 import SlideLayout from "../SlideLayout";
 
 const SlideContact = () => (
-  <SlideLayout backgroundImage="/images/foto-apresentacao-02.png" overlay="dark">
+  <SlideLayout backgroundImage="/images/foto-apresentacao-02.png" overlay="custom-light">
     <div className="flex h-full">
       <div className="flex-1 flex flex-col justify-end pb-[80px] px-[120px]">
         <h2 className="text-gold-gradient mb-[36px] animate-fade-in-up" style={{
