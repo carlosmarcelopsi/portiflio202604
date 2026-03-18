@@ -197,6 +197,10 @@
   background: linear-gradient(90deg, hsla(220, 40%, 8%, 0.95) 0%, hsla(220, 40%, 8%, 0.7) 50%, transparent 100%);
 }
 
+.overlay-light {
+  background: linear-gradient(135deg, hsla(220, 40%, 8%, 0.5), hsla(220, 30%, 12%, 0.35));
+}
+
 .overlay-gradient-bottom {
   background: linear-gradient(0deg, hsla(220, 40%, 8%, 0.95) 0%, hsla(220, 40%, 8%, 0.5) 50%, transparent 100%);
 }

@@ -21,6 +21,7 @@ const SlideLayout = ({ children, backgroundImage, overlay = "none", className = 
         <div className={`absolute inset-0 ${
           overlay === "dark" ? "overlay-dark" : 
           overlay === "gradient-left" ? "overlay-gradient-left" : 
+          overlay === "custom-light" ? "overlay-light" :
           "overlay-gradient-bottom"
         }`} />
       )}
