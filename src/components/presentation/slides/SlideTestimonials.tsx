@@ -33,17 +33,17 @@ const SlideTestimonials = () => (
             style={{ background: "hsl(220 20% 14% / 0.7)", border: "1px solid hsl(220 15% 22%)" }}>
             <div>
               <div className="text-gold-gradient mb-[12px]" style={{ fontFamily: "'Playfair Display', serif", fontSize: 50, lineHeight: 1 }}>"</div>
-              <p style={{ color: "hsl(40 20% 90%)", fontFamily: "'Source Sans 3', sans-serif", fontSize: 28, lineHeight: 1.4 }}>
+              <p style={{ color: "hsl(40 20% 90%)", fontFamily: "'Source Sans 3', sans-serif", fontSize: 32, lineHeight: 1.35 }}>
                 {item.quote}
               </p>
             </div>
             <div className="mt-[20px] pt-[14px]" style={{ borderTop: "1px solid hsl(40 70% 55% / 0.2)" }}>
               {item.authors.map((author, j) => (
-                <p key={j} style={{ color: "hsl(40 70% 55%)", fontFamily: "'Source Sans 3', sans-serif", fontSize: 22, fontWeight: 600 }}>
+                <p key={j} style={{ color: "hsl(40 70% 55%)", fontFamily: "'Source Sans 3', sans-serif", fontSize: 24, fontWeight: 600 }}>
                   {author}
                 </p>
               ))}
-              <p style={{ color: "hsl(40 70% 55%)", fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 800, marginTop: 6, letterSpacing: "0.03em" }}>
+              <p style={{ color: "hsl(40 70% 55%)", fontFamily: "'Playfair Display', serif", fontSize: 26, fontWeight: 800, marginTop: 6, letterSpacing: "0.03em" }}>
                 {item.company}
               </p>
             </div>
