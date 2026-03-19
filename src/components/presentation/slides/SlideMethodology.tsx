@@ -13,7 +13,7 @@ const SlideMethodology = () => (
       <div className="flex-1 flex gap-[40px] justify-center items-end pb-[60px]">
         {[
           { letter: "M", word: "Mapear", desc: "Diagnóstico e identificação dos riscos e necessidades das equipes e lideranças" },
-          { letter: "A", word: "Analisar", desc: "Análise profunda dos dados e contexto organizacional. Preparação do plano de ação." },
+          { letter: "A", word: "Analisar", desc: "Análise dos dados e contexto organizacional. Preparação do plano de ação." },
           { letter: "I", word: "Intervir", desc: "Ações estratégicas e intervenções personalizadas" },
           { letter: "S", word: "Sustentar", desc: "Acompanhamento contínuo e sustentabilidade dos resultados" },
         ].map((item, i) => (
