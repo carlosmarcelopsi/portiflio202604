@@ -19,13 +19,13 @@ const SlideClients = () => (
       <div className="flex-1 flex items-center justify-center px-[100px]">
         <div className="grid grid-cols-2 gap-[24px] w-full max-w-[1500px] animate-fade-in delay-300">
           {clients.map((client, i) => (
-            <div key={i} className="relative rounded-[16px] overflow-hidden" style={{ height: 230 }}>
+            <div key={i} className="relative rounded-[16px] overflow-hidden" style={{ height: 190 }}>
               <img src={client.photo} alt={client.alt} className="w-full h-full object-cover" />
-              <div className="absolute inset-x-0 bottom-0 flex items-center justify-center py-[28px]"
+              <div className="absolute inset-x-0 bottom-0 flex items-center justify-center py-[24px]"
                 style={{ background: "linear-gradient(0deg, hsl(220 40% 8% / 0.85) 0%, transparent 100%)" }}>
-                <div className="px-[36px] py-[18px] rounded-[8px] flex items-center justify-center"
-                  style={{ background: "hsl(0 0% 100% / 0.9)", minWidth: 240 }}>
-                  <img src={client.logo} alt={client.alt} className="h-[80px] object-contain" />
+                <div className="px-[40px] py-[20px] rounded-[8px] flex items-center justify-center"
+                  style={{ background: "hsl(0 0% 100% / 0.9)", minWidth: 280 }}>
+                  <img src={client.logo} alt={client.alt} className="h-[100px] object-contain" />
                 </div>
               </div>
             </div>
